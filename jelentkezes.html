@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jelentkezés — Világfa Sárkányai Gyermek Dobcsapat</title>
+<meta name="description" content="Jelentkezési lap a Világfa Sárkányai gyermek dobcsapatba (6–14 év), a Bécsi Magyar Iskolában. Töltsd ki a szülői jelentkezést, és csatlakozzatok a közös dobolás öröméhez.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://becs.taltosdob.hu/jelentkezes.html">
+<link rel="icon" type="image/png" href="images/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="hu_HU">
+<meta property="og:title" content="Jelentkezés — Világfa Sárkányai Gyermek Dobcsapat">
+<meta property="og:description" content="Jelentkezési lap a Világfa Sárkányai gyermek dobcsapatba (6–14 év), a Bécsi Magyar Iskolában.">
+<meta property="og:url" content="https://becs.taltosdob.hu/jelentkezes.html">
+<meta property="og:image" content="https://becs.taltosdob.hu/images/social-share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+:root{
+  --night: #16223A;
+  --night-soft: #1F3050;
+  --gold: #D69A4E;
+  --gold-bright: #EBB876;
+  --ember: #C1502E;
+  --parchment: #F3EBDA;
+  --parchment-dim: #E6D9BE;
+  --bark: #5B3D27;
+  --leaf: #44603F;
+  --ink: #20180F;
+  --err: #B33A2E;
+}
+*{ margin:0; padding:0; box-sizing:border-box; }
+html{ scroll-behavior:smooth; }
+body{
+  font-family:'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background:var(--parchment);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+h1,h2,h3{ font-family:'Cormorant Garamond', serif; font-weight:600; }
+a{ color:var(--ember); }
+::selection{ background:var(--gold); color:var(--night); }
+
+/* hero */
+.form-hero{
+  background:radial-gradient(ellipse 120% 90% at 50% -20%, #233a5e 0%, var(--night) 60%, #0d1525 100%);
+  color:var(--parchment);
+  padding:3.5rem 6vw 4.5rem;
+  text-align:center;
+  position:relative;
+}
+.form-hero img.logo{
+  width:clamp(90px,13vw,130px);
+  filter:brightness(0) invert(1) drop-shadow(0 4px 20px rgba(214,154,78,0.4));
+  margin-bottom:1.4rem;
+}
+.form-hero .eyebrow{
+  font-size:0.78rem; letter-spacing:0.18em; text-transform:uppercase;
+  color:var(--gold-bright); font-weight:500; display:block; margin-bottom:1rem;
+}
+.form-hero h1{ font-size:clamp(2.2rem,5vw,3.4rem); line-height:1.08; }
+.form-hero p{ max-width:46ch; margin:1.4rem auto 0; color:var(--parchment-dim); font-weight:300; font-size:1.08rem; }
+.back-link{
+  position:absolute; top:1.5rem; left:6vw; color:var(--parchment-dim);
+  font-size:0.85rem; text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem;
+}
+.back-link:hover{ color:var(--gold-bright); }
+
+/* form */
+.form-wrap{ max-width:720px; margin:-2.5rem auto 0; padding:0 6vw 6rem; position:relative; z-index:2; }
+.card{
+  background:#fff; border-radius:20px; padding:clamp(1.6rem,4vw,3rem);
+  box-shadow:0 30px 60px -30px rgba(22,34,58,0.35);
+}
+fieldset{ border:none; margin-bottom:2.4rem; }
+legend{
+  font-family:'Cormorant Garamond', serif; font-size:1.5rem; font-weight:600;
+  color:var(--ink); margin-bottom:0.4rem; padding-bottom:0.6rem;
+  border-bottom:2px solid var(--parchment-dim); width:100%;
+}
+.legend-note{ font-size:0.9rem; color:#6b6147; font-weight:300; margin:0.6rem 0 1.4rem; }
+.field{ margin-bottom:1.3rem; }
+.field label{ display:block; font-weight:500; font-size:0.95rem; margin-bottom:0.45rem; }
+.field .req{ color:var(--ember); }
+.field input[type=text],
+.field input[type=email],
+.field input[type=tel],
+.field input[type=number],
+.field input[type=date],
+.field select,
+.field textarea{
+  width:100%; padding:0.8rem 1rem; font-family:inherit; font-size:1rem;
+  border:1.5px solid #d8cdb3; border-radius:10px; background:#fcfaf4; color:var(--ink);
+  transition:border-color .25s, box-shadow .25s;
+}
+.field textarea{ min-height:90px; resize:vertical; }
+.field input:focus, .field select:focus, .field textarea:focus{
+  outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(214,154,78,0.18);
+}
+.hint{ font-size:0.82rem; color:#8a7f64; margin-top:0.35rem; font-weight:300; }
+.radio-group, .check-group{ display:flex; flex-direction:column; gap:0.55rem; margin-top:0.3rem; }
+.radio-group.inline{ flex-direction:row; flex-wrap:wrap; gap:0.8rem 1.6rem; }
+.opt{ display:flex; align-items:flex-start; gap:0.6rem; font-weight:400; font-size:0.96rem; cursor:pointer; }
+.opt input{ margin-top:0.25rem; accent-color:var(--ember); width:18px; height:18px; flex-shrink:0; }
+.highlight-box{
+  background:linear-gradient(135deg, #fbf3e3, #f6ead2);
+  border:1.5px solid var(--gold); border-radius:14px; padding:1.4rem 1.5rem; margin-top:0.5rem;
+}
+.highlight-box legend{ border:none; color:var(--ember); padding:0; }
+.gdpr-box{
+  background:#fcfaf4; border:1.5px solid #d8cdb3; border-radius:12px;
+  padding:1rem 1.2rem; font-size:0.85rem; color:#5b5340; font-weight:300; line-height:1.55;
+  margin-bottom:1.2rem;
+}
+.gdpr-box a{ color:var(--ember); }
+.btn-submit{
+  display:inline-flex; align-items:center; justify-content:center; gap:0.6rem;
+  width:100%; padding:1.1rem 2rem; border:none; border-radius:980px;
+  background:var(--gold); color:var(--night); font-weight:600; font-size:1.05rem;
+  font-family:inherit; cursor:pointer; transition:all .35s cubic-bezier(.22,.61,.36,1);
+}
+.btn-submit:hover{ background:var(--gold-bright); transform:translateY(-1px); box-shadow:0 14px 30px -10px rgba(214,154,78,0.5); }
+.btn-submit:disabled{ opacity:0.55; cursor:not-allowed; transform:none; box-shadow:none; }
+.error-msg{ color:var(--err); font-size:0.82rem; margin-top:0.35rem; display:none; }
+.field.invalid input, .field.invalid select, .field.invalid textarea{ border-color:var(--err); }
+.field.invalid .error-msg{ display:block; }
+
+/* status */
+#statusBox{ display:none; text-align:center; padding:2rem 1rem; }
+#statusBox.show{ display:block; }
+#statusBox .icon{ font-size:2.4rem; margin-bottom:0.6rem; }
+#statusBox h2{ font-size:1.8rem; margin-bottom:0.6rem; }
+#statusBox p{ color:#5b5340; font-weight:300; }
+.spinner{ display:inline-block; width:20px; height:20px; border:3px solid rgba(22,34,58,0.25); border-top-color:var(--night); border-radius:50%; animation:spin .8s linear infinite; }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+footer{
+  background:var(--night); color:var(--parchment-dim); text-align:center;
+  padding:2.5rem 6vw; font-size:0.85rem; font-weight:300; line-height:1.7;
+}
+footer a{ color:var(--gold-bright); }
+@media (max-width:600px){
+  .radio-group.inline{ flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<header class="form-hero">
+  <a href="index.html" class="back-link">← Vissza a főoldalra</a>
+  <img class="logo" src="images/logo.png" alt="Világfa Sárkányai logó">
+  <span class="eyebrow">Bécsi Magyar Iskola · 6–14 év</span>
+  <h1>Jelentkezés a dobcsapatba</h1>
+  <p>Töltsd ki az alábbi szülői jelentkezési lapot, és felvesszük veletek a kapcsolatot a következő lépésekről.</p>
+</header>
+
+<main class="form-wrap">
+  <div class="card">
+    <form id="jelentkezesForm" novalidate>
+
+      <!-- SZÜLŐ -->
+      <fieldset>
+        <legend>1. A szülő / gondviselő adatai</legend>
+        <div class="field">
+          <label for="szuloNev">Szülő / gondviselő teljes neve <span class="req">*</span></label>
+          <input type="text" id="szuloNev" name="szuloNev" required>
+          <div class="error-msg">Kérjük, add meg a neved.</div>
+        </div>
+        <div class="field">
+          <label for="email">E-mail cím <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required>
+          <div class="error-msg">Kérjük, adj meg egy érvényes e-mail címet.</div>
+        </div>
+        <div class="field">
+          <label for="telefon">Telefonszám <span class="req">*</span></label>
+          <input type="tel" id="telefon" name="telefon" placeholder="+43 ..." required>
+          <div class="error-msg">Kérjük, add meg a telefonszámod.</div>
+        </div>
+        <div class="field">
+          <label for="nyelv">Otthoni nyelvhasználat</label>
+          <select id="nyelv" name="nyelv">
+            <option value="">— Válassz —</option>
+            <option>Otthon magyarul beszélünk</option>
+            <option>Vegyes család (magyar + más nyelv)</option>
+            <option>A gyermek most ismerkedik a magyar nyelvvel</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- GYERMEK -->
+      <fieldset>
+        <legend>2. A gyermek adatai</legend>
+        <p class="legend-note">Több gyermeket is jelentkeztethetsz — a további gyerekek adatait írd a megjegyzés rovatba a lap alján.</p>
+        <div class="field">
+          <label for="gyermekNev">A gyermek neve <span class="req">*</span></label>
+          <input type="text" id="gyermekNev" name="gyermekNev" required>
+          <div class="error-msg">Kérjük, add meg a gyermek nevét.</div>
+        </div>
+        <div class="field">
+          <label for="gyermekKor">A gyermek életkora <span class="req">*</span></label>
+          <input type="number" id="gyermekKor" name="gyermekKor" min="4" max="18" required>
+          <div class="hint">A program 6–14 éveseknek szól. Más korú gyermek esetén egyeztetünk.</div>
+          <div class="error-msg">Kérjük, add meg a gyermek életkorát.</div>
+        </div>
+        <div class="field">
+          <label for="zeneiTudas">Van-e a gyermeknek előzetes zenei / ritmikai tapasztalata?</label>
+          <select id="zeneiTudas" name="zeneiTudas">
+            <option value="">— Válassz —</option>
+            <option>Nincs, most kezdene ismerkedni</option>
+            <option>Kicsi (énekelt, tapsolt, ovis foglalkozás)</option>
+            <option>Tanult már hangszert / járt zeneórára</option>
+          </select>
+          <div class="hint">Előzetes zenei tudás nem szükséges — csak hogy jobban megismerjük a gyermeket.</div>
+        </div>
+        <div class="field">
+          <label for="egeszseg">Van-e bármilyen egészségügyi / allergiás / hallási tudnivaló, amit fontos tudnunk?</label>
+          <textarea id="egeszseg" name="egeszseg" placeholder="Pl. allergia, érzékenység hangerőre, egyéb. Ha nincs, hagyd üresen."></textarea>
+        </div>
+      </fieldset>
+
+      <!-- RÉSZVÉTEL -->
+      <fieldset>
+        <legend>3. Részvétel</legend>
+        <div class="field">
+          <label>Melyik ütemforma felelne meg leginkább? <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="opt"><input type="radio" name="utem" value="Havi 1 vasárnap" required> Havonta 1 vasárnap (alapforma)</label>
+            <label class="opt"><input type="radio" name="utem" value="Kéthetente"> Kéthetente (elegendő jelentkező esetén)</label>
+            <label class="opt"><input type="radio" name="utem" value="Mindegy / rugalmas"> Rugalmas vagyok, mindkettő megfelel</label>
+          </div>
+          <div class="error-msg">Kérjük, válassz egy lehetőséget.</div>
+        </div>
+        <div class="field">
+          <label>Érdekelne-e az októberi egész napos dobkészítő műhely (külön díjas)?</label>
+          <div class="radio-group inline">
+            <label class="opt"><input type="radio" name="dobkeszito" value="Igen"> Igen</label>
+            <label class="opt"><input type="radio" name="dobkeszito" value="Talán"> Talán, érdekel</label>
+            <label class="opt"><input type="radio" name="dobkeszito" value="Nem"> Most nem</label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="honnan">Honnan hallottál a dobcsapatról?</label>
+          <select id="honnan" name="honnan">
+            <option value="">— Válassz —</option>
+            <option>Bécsi Magyar Iskola</option>
+            <option>Facebook / közösségi média</option>
+            <option>Ismerőstől, ajánlásra</option>
+            <option>www.taltosdob.hu</option>
+            <option>Egyéb</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- FELNŐTT DOBCSAPAT -->
+      <fieldset class="highlight-box">
+        <legend>4. Felnőtt dobcsapat</legend>
+        <div class="field">
+          <label>Lenne-e kedved szülőként <strong>magad is</strong> részt venni egy felnőtt dobcsapatban, amennyiben elindulna? <span class="req">*</span></label>
+          <div class="radio-group">
+            <label class="opt"><input type="radio" name="felnottDob" value="Igen, szívesen csatlakoznék" required> Igen, szívesen csatlakoznék</label>
+            <label class="opt"><input type="radio" name="felnottDob" value="Talán, érdekel a részvétel"> Talán — érdekel, szeretnék többet tudni</label>
+            <label class="opt"><input type="radio" name="felnottDob" value="Nem, csak a gyermekem venne részt"> Nem, csak a gyermekem venne részt</label>
+          </div>
+          <div class="error-msg">Kérjük, válassz egy lehetőséget.</div>
+        </div>
+      </fieldset>
+
+      <!-- MEGJEGYZÉS -->
+      <fieldset>
+        <legend>5. Megjegyzés</legend>
+        <div class="field">
+          <label for="megjegyzes">Bármi egyéb, amit szeretnél megosztani velünk?</label>
+          <textarea id="megjegyzes" name="megjegyzes" placeholder="Pl. további jelentkező gyermek adatai, kérdés, kérés..."></textarea>
+        </div>
+      </fieldset>
+
+      <!-- GDPR -->
+      <div class="gdpr-box">
+        <strong>Adatkezelési tájékoztató.</strong> A megadott adatokat kizárólag a jelentkezés feldolgozása és a veled
+        való kapcsolatfelvétel céljából kezeljük. Adatkezelők: a Táltos Dob (Regélő Fehér Táltos Hagyományőrző Egyesület)
+        részéről <strong>Hupczik Andrea</strong>, a Bécsi Magyar Iskola részéről <strong>Bánhalmi Norbert</strong>.
+        A weboldal a GitHubon van elhelyezve, a jelentkezés feldolgozása Google Script segítségével történik;
+        az adatokat harmadik félnek nem adjuk át. Részletek az
+        <a href="adatvedelem.html">Adatvédelmi tájékoztatóban</a>. Kérésre az adataidat töröljük.
+      </div>
+      <div class="field">
+        <label class="opt"><input type="checkbox" id="gdprConsent" name="gdprConsent" required>
+          <span>Elolvastam és elfogadom az adatkezelési tájékoztatót. <span class="req">*</span></span></label>
+        <div class="error-msg">A jelentkezéshez el kell fogadnod az adatkezelési tájékoztatót.</div>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submitBtn">Jelentkezés elküldése</button>
+    </form>
+
+    <div id="statusBox"></div>
+  </div>
+</main>
+
+<footer>
+  Világfa Sárkányai Gyermek Dobcsapat — a <a href="https://www.taltosdob.hu" target="_blank" rel="noopener">www.taltosdob.hu</a>
+  bécsi csapata és a <a href="https://www.magyariskola.at" target="_blank" rel="noopener">Bécsi Magyar Iskola</a> közös programja.<br>
+  Kérdés esetén hívható napközben 9–16 óra között: <a href="tel:+436776165592">+43 677 616 555 92</a> ·
+  <a href="mailto:marketing@kozpontiszovetseg.at">marketing@kozpontiszovetseg.at</a><br>
+  © Világfa Sárkányai Gyermek Dobcsapat
+</footer>
+
+<script>
+// ====== ÁLLÍTSD BE: a Google Apps Script webalkalmazás URL-je ======
+const SCRIPT_URL = 'IDE_MASOLD_BE_A_GOOGLE_SCRIPT_WEBAPP_URL_T';
+
+const form = document.getElementById('jelentkezesForm');
+const submitBtn = document.getElementById('submitBtn');
+const statusBox = document.getElementById('statusBox');
+
+function markInvalid(el, on){
+  const field = el.closest('.field');
+  if(field) field.classList.toggle('invalid', on);
+}
+
+function validate(){
+  let ok = true;
+  // required text/email/number
+  ['szuloNev','email','telefon','gyermekNev','gyermekKor'].forEach(id=>{
+    const el = document.getElementById(id);
+    const bad = !el.value.trim() || (el.type==='email' && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value));
+    markInvalid(el, bad);
+    if(bad) ok = false;
+  });
+  // required radios
+  ['utem','felnottDob'].forEach(name=>{
+    const checked = form.querySelector('input[name="'+name+'"]:checked');
+    const grp = form.querySelector('input[name="'+name+'"]').closest('.field');
+    if(grp) grp.classList.toggle('invalid', !checked);
+    if(!checked) ok = false;
+  });
+  // gdpr
+  const gdpr = document.getElementById('gdprConsent');
+  markInvalid(gdpr, !gdpr.checked);
+  if(!gdpr.checked) ok = false;
+  return ok;
+}
+
+form.addEventListener('submit', async function(e){
+  e.preventDefault();
+  if(!validate()){
+    form.querySelector('.field.invalid')?.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<span class="spinner"></span> Küldés folyamatban...';
+
+  const data = Object.fromEntries(new FormData(form).entries());
+  data.gdprConsent = document.getElementById('gdprConsent').checked ? 'Elfogadva' : 'Nem';
+  data.bekuldveTime = new Date().toLocaleString('hu-HU');
+
+  try {
+    // text/plain elkerüli a CORS preflightet Apps Script felé
+    await fetch(SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(data)
+    });
+    form.style.display = 'none';
+    statusBox.className = 'show';
+    statusBox.innerHTML = '<div class="icon">🥁</div><h2>Köszönjük a jelentkezést!</h2>' +
+      '<p>A jelentkezésedet megkaptuk, és hamarosan felvesszük veled a kapcsolatot. ' +
+      'Kérdés esetén hívj minket napközben 9–16 óra között: +43 677 616 555 92.</p>';
+    statusBox.scrollIntoView({behavior:'smooth', block:'center'});
+  } catch(err){
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Jelentkezés elküldése';
+    statusBox.className = 'show';
+    statusBox.innerHTML = '<div class="icon">⚠️</div><h2>Hiba történt</h2>' +
+      '<p>Sajnos nem sikerült elküldeni a jelentkezést. Kérjük, próbáld újra, vagy írj a ' +
+      'marketing@kozpontiszovetseg.at címre.</p>';
+  }
+});
+
+// live-clear invalid állapot
+form.addEventListener('input', e=>{
+  const f = e.target.closest('.field');
+  if(f) f.classList.remove('invalid');
+});
+</script>
+</body>
+</html>
