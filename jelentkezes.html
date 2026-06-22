@@ -19,16 +19,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Inter:wght@300;400;500;600&display=swap');
 
 :root{
-  --night: #16223A;
-  --night-soft: #1F3050;
-  --gold: #D69A4E;
-  --gold-bright: #EBB876;
-  --ember: #C1502E;
-  --parchment: #F3EBDA;
-  --parchment-dim: #E6D9BE;
-  --bark: #5B3D27;
-  --leaf: #44603F;
-  --ink: #20180F;
+  --night: #243323;
+  --night-soft: #2E4232;
+  --gold: #C9A961;
+  --gold-bright: #E3C885;
+  --ember: #9A6B3F;
+  --parchment: #EDE7D6;
+  --parchment-dim: #D8CFB8;
+  --bark: #5B4327;
+  --leaf: #4A6340;
+  --leaf-deep: #2E4630;
+  --ink: #2A2A1E;
   --err: #B33A2E;
 }
 *{ margin:0; padding:0; box-sizing:border-box; }
@@ -46,7 +47,7 @@ a{ color:var(--ember); }
 
 /* hero */
 .form-hero{
-  background:radial-gradient(ellipse 120% 90% at 50% -20%, #233a5e 0%, var(--night) 60%, #0d1525 100%);
+  background:radial-gradient(ellipse 120% 90% at 50% -20%, #3a5340 0%, var(--night) 60%, #142013 100%);
   color:var(--parchment);
   padding:3.5rem 6vw 4.5rem;
   text-align:center;
@@ -54,7 +55,7 @@ a{ color:var(--ember); }
 }
 .form-hero img.logo{
   width:clamp(90px,13vw,130px);
-  filter:brightness(0) invert(1) drop-shadow(0 4px 20px rgba(214,154,78,0.4));
+  filter:brightness(0) invert(1) drop-shadow(0 4px 20px rgba(201,169,97,0.4));
   margin-bottom:1.4rem;
 }
 .form-hero .eyebrow{
@@ -73,7 +74,7 @@ a{ color:var(--ember); }
 .form-wrap{ max-width:720px; margin:-2.5rem auto 0; padding:0 6vw 6rem; position:relative; z-index:2; }
 .card{
   background:#fff; border-radius:20px; padding:clamp(1.6rem,4vw,3rem);
-  box-shadow:0 30px 60px -30px rgba(22,34,58,0.35);
+  box-shadow:0 30px 60px -30px rgba(36,51,35,0.35);
 }
 fieldset{ border:none; margin-bottom:2.4rem; }
 legend{
@@ -98,7 +99,7 @@ legend{
 }
 .field textarea{ min-height:90px; resize:vertical; }
 .field input:focus, .field select:focus, .field textarea:focus{
-  outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(214,154,78,0.18);
+  outline:none; border-color:var(--gold); box-shadow:0 0 0 3px rgba(201,169,97,0.18);
 }
 .hint{ font-size:0.82rem; color:#8a7f64; margin-top:0.35rem; font-weight:300; }
 .radio-group, .check-group{ display:flex; flex-direction:column; gap:0.55rem; margin-top:0.3rem; }
@@ -122,7 +123,7 @@ legend{
   background:var(--gold); color:var(--night); font-weight:600; font-size:1.05rem;
   font-family:inherit; cursor:pointer; transition:all .35s cubic-bezier(.22,.61,.36,1);
 }
-.btn-submit:hover{ background:var(--gold-bright); transform:translateY(-1px); box-shadow:0 14px 30px -10px rgba(214,154,78,0.5); }
+.btn-submit:hover{ background:var(--gold-bright); transform:translateY(-1px); box-shadow:0 14px 30px -10px rgba(201,169,97,0.5); }
 .btn-submit:disabled{ opacity:0.55; cursor:not-allowed; transform:none; box-shadow:none; }
 .error-msg{ color:var(--err); font-size:0.82rem; margin-top:0.35rem; display:none; }
 .field.invalid input, .field.invalid select, .field.invalid textarea{ border-color:var(--err); }
@@ -134,7 +135,7 @@ legend{
 #statusBox .icon{ font-size:2.4rem; margin-bottom:0.6rem; }
 #statusBox h2{ font-size:1.8rem; margin-bottom:0.6rem; }
 #statusBox p{ color:#5b5340; font-weight:300; }
-.spinner{ display:inline-block; width:20px; height:20px; border:3px solid rgba(22,34,58,0.25); border-top-color:var(--night); border-radius:50%; animation:spin .8s linear infinite; }
+.spinner{ display:inline-block; width:20px; height:20px; border:3px solid rgba(36,51,35,0.25); border-top-color:var(--night); border-radius:50%; animation:spin .8s linear infinite; }
 @keyframes spin{ to{ transform:rotate(360deg); } }
 
 footer{
@@ -309,7 +310,7 @@ footer a{ color:var(--gold-bright); }
 
 <script>
 // ====== ÁLLÍTSD BE: a Google Apps Script webalkalmazás URL-je ======
-const SCRIPT_URL = 'IDE_MASOLD_BE_A_GOOGLE_SCRIPT_WEBAPP_URL_T';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxAnrjlYOHdrH7lm5HVMxbK-CSJkjWgxrZvDc_26--7fUAalP1exMw76vPke_pYT9R_/exec';
 
 const form = document.getElementById('jelentkezesForm');
 const submitBtn = document.getElementById('submitBtn');
